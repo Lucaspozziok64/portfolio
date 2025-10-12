@@ -1,11 +1,14 @@
+import Footer from "./components/Footer";
+import Inicio from "./components/Inicio";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-
   return (
     <>
-    <h1>Hola Mundo!!</h1>
+      <Inicio />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

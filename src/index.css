@@ -1,0 +1,54 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(
+    90deg,
+    #121959,
+    #172179,
+    #384194
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    90deg,
+    #121959,
+    #172179,
+    #384194
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.imagenPerfil {
+  height: 300px;
+  width: 280px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+}
+
+.botonDescargar {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: large;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: -2px 0px 57px 11px rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: -2px 0px 57px 11px rgba(255, 255, 255, 0.85);
+  -moz-box-shadow: -2px 0px 57px 11px rgba(255, 255, 255, 0.85);
+    transition: 1s;
+}
+
+.botonDescargar:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.contenedorImagen {
+  border: 3px dotted #fff;
+  text-decoration: none !important;
+  color: #fff;
+  transition: 1s ease;
+}
+
+.contenedorImagen:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
