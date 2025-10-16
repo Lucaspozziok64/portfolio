@@ -31,24 +31,24 @@ const CardProyectos = ({ proyecto }) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header className="text-end" closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Header className="colorFondoModal" closeButton>
+          <Modal.Title id="contained-modal-title-vcenter" className="w-100 text-center text-light">
             {proyecto.title}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <p>{proyecto.descripcion}</p>
-          <div className="contenedorImagen border border-black">
+        <Modal.Body className="colorFondoModal">
+          <p className="text-center text-light">{proyecto.descripcion}</p>
+          <div className="contenedorImagen">
             <img
               src={proyecto.pic}
               alt={proyecto.title}
               className="card-image img-fluid"
             />
           </div>
-          <hr></hr>
+          <hr className="text-light"></hr>
           <div>
-            <h5 className="text-center my-2">Tecnologias empleadas:</h5>
-            <ul className="list-unstyled d-flex justify-content-evenly">
+            <h5 className="text-center my-2 text-light">Tecnologias empleadas:</h5>
+            <ul className="listaSkills list-unstyled d-flex justify-content-evenly">
               {proyecto.tecnologias.map((tecnologia, index) => (
                 <li key={index} className="my-1">
                   <img
@@ -62,7 +62,7 @@ const CardProyectos = ({ proyecto }) => {
             <a
               href={proyecto.proyectoUrl}
               target="_blank"
-              className="d-block text-end text-dark"
+              className="d-block text-end text-light"
             >
               Ver proyecto
             </a>

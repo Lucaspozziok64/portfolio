@@ -29,6 +29,8 @@ const Inicio = () => {
       title: "Web Movies",
       pic: xtream,
       proyectoUrl: "https://moviesxtream.netlify.app/",
+      descripcion:
+        "Movie streaming platform with advanced search and filtering capabilities",
       tecnologias: [
         "https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat",
         "https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat",
@@ -41,6 +43,7 @@ const Inicio = () => {
       title: "leaked news",
       pic: noticiasApp,
       proyectoUrl: "https://noticiasfiltradas.netlify.app/",
+      descripcion: "News aggregation app with real-time updates",
       tecnologias: [
         "https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat",
         "https://img.shields.io/badge/-Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=flat",
@@ -53,6 +56,8 @@ const Inicio = () => {
       title: "Mates Ecommerce Website",
       pic: mates,
       proyectoUrl: "https://mateandoshop.netlify.app/",
+      descripcion:
+        "E-commerce platform for traditional Argentine mate products",
       tecnologias: [
         "https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat",
         "https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat",
