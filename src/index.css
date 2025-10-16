@@ -52,7 +52,6 @@
   color: #000 !important;
 }
 
-.imagenTecnologia {
-  height: 25px;
-  margin: 2px;
+.colorFondoModal {
+  background-color:#384194;
 }
