@@ -33,7 +33,7 @@
   box-shadow: -2px 0px 57px 11px rgba(255, 255, 255, 0.85);
   -webkit-box-shadow: -2px 0px 57px 11px rgba(255, 255, 255, 0.85);
   -moz-box-shadow: -2px 0px 57px 11px rgba(255, 255, 255, 0.85);
-    transition: 1s;
+  transition: 1s;
 }
 
 .botonDescargar:hover {
@@ -42,7 +42,6 @@
 }
 
 .contenedorImagen {
-  border: 3px dotted #fff;
   text-decoration: none !important;
   color: #fff;
   transition: 1s ease;
@@ -51,4 +50,9 @@
 .contenedorImagen:hover {
   background-color: #fff;
   color: #000 !important;
+}
+
+.imagenTecnologia {
+  height: 25px;
+  margin: 2px;
 }
