@@ -47,7 +47,7 @@ const CardProyectos = ({ proyecto }) => {
           </div>
           <hr className="text-light"></hr>
           <div>
-            <h5 className="text-center my-2 text-light">Tecnologias empleadas:</h5>
+            <h5 className="text-center my-2 text-light">Technologies used:</h5>
             <ul className="listaSkills list-unstyled d-flex justify-content-evenly">
               {proyecto.tecnologias.map((tecnologia, index) => (
                 <li key={index} className="my-1">
@@ -64,7 +64,7 @@ const CardProyectos = ({ proyecto }) => {
               target="_blank"
               className="d-block text-end text-light"
             >
-              Ver proyecto
+              See projects
             </a>
           </div>
         </Modal.Body>
