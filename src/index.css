@@ -18,7 +18,7 @@
 
 .imagenPerfil {
   height: 300px;
-  width: 280px;
+  width: 295px;
   border-radius: 50px;
   border: 1px solid #fff;
 }
@@ -53,5 +53,5 @@
 }
 
 .colorFondoModal {
-  background-color:#384194;
+  background-color: #172179;
 }
