@@ -1,7 +1,11 @@
-import { Form, Button, Container } from "react-bootstrap";
+import { useRef, useState } from "react";
+import { Form, Button, Container, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 const Formulario = () => {
+  const [validated, setValidated] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -9,6 +13,24 @@ const Formulario = () => {
     reset,
   } = useForm();
 
+  const form = useRef();
+
+  const sendEmail = () => {
+    emailjs
+      .sendForm("service_ef3sv7t", "template_1vi86a5", form.current, {
+        publicKey: "kj6kTakPgixopYKvB",
+      })
+      .then(
+        () => {
+          <Alert>("Email ENVIADO!");</Alert>
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+      reset()
+    setValidated(true);
+  };
 
   return (
     <section className="container text-light">
@@ -17,7 +39,13 @@ const Formulario = () => {
         Let's do something amazing together🚀
       </h3>
       <Container className="mb-3 d-flex justify-content-center">
-        <Form className="text-light w-75" onSubmit={handleSubmit}>
+        <Form
+          className="text-light w-75"
+          ref={form}
+          noValidate
+          validated={validated}
+          onSubmit={handleSubmit(sendEmail)}
+        >
           <Form.Group>
             <Form.Label>Name/company*</Form.Label>
             <Form.Control
@@ -25,7 +53,7 @@ const Formulario = () => {
               className="text-light bg-dark"
               minLength={2}
               maxLength={100}
-              {...register("name", {
+              {...register("user_name", {
                 required: "El nombre es un dato obligatorio",
                 minLength: {
                   value: 2,
@@ -49,7 +77,7 @@ const Formulario = () => {
               placeholder="Ej lucas@mail.com"
               minLength={4}
               maxLength={100}
-              {...register("email", {
+              {...register("user_email", {
                 required: "El correo electrónico es un dato obligatorio",
                 pattern: {
                   value:
@@ -82,7 +110,7 @@ const Formulario = () => {
               rows={4}
               minLength={4}
               maxLength={300}
-              {...register("consulta", {
+              {...register("message", {
                 required: "La consulta es un campo obligatorio",
                 minLength: {
                   value: 4,
