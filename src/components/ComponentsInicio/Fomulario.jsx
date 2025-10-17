@@ -144,11 +144,6 @@ const Formulario = () => {
               ? `${t("formPlaceholders.sending")}`
               : `${t("formPlaceholders.submit")}`}
           </Button>
-          {isSubmitting && (
-            <Alert variant="warning" className="mt-3">
-              Este producto está temporalmente sin stock
-            </Alert>
-          )}
         </Form>
       </Container>
     </section>
