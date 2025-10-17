@@ -32,6 +32,7 @@ const CardProyectos = ({ proyecto }) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        className="colorFondo"
       >
         <Modal.Header className="colorFondoModal" closeButton>
           <Modal.Title id="contained-modal-title-vcenter" className="w-100 text-center text-light">
