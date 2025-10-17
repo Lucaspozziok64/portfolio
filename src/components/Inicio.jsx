@@ -1,6 +1,5 @@
 import imagenPerfil from "../assets/imagenPerfil.jpeg"
 import blogRecetas from "../assets/blogRecetas.png";
-import ListaProyectos from "./ComponentsInicio/listaProyectos";
 import xtream from "../assets/xtream.png";
 import noticiasApp from "../assets/noticiasApp.png";
 import mates from "../assets/meates.png";
@@ -8,6 +7,7 @@ import Formulario from "./ComponentsInicio/Fomulario";
 import MySkill from "./ComponentsInicio/MySkill";
 import { useTranslation } from "./hooks/useTranslation";
 import LanguageSwitcher from "./LanguajeSwhitcher";
+import ListaProyectos from "./ComponentsInicio/ListaProyectos"
 
 const Inicio = () => {
   const { t, getCV } = useTranslation();
