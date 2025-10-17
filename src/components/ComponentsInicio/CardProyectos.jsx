@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { useTranslation } from "../hooks/useTranslation";
 
 const CardProyectos = ({ proyecto }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const { t } = useTranslation()
 
   return (
     <>
@@ -47,7 +49,7 @@ const CardProyectos = ({ proyecto }) => {
           </div>
           <hr className="text-light"></hr>
           <div>
-            <h5 className="text-center my-2 text-light">Technologies used:</h5>
+            <h5 className="text-center my-2 text-light">{t('technologiesUsed')}</h5>
             <ul className="listaSkills list-unstyled d-flex justify-content-evenly">
               {proyecto.tecnologias.map((tecnologia, index) => (
                 <li key={index} className="my-1">
@@ -64,7 +66,7 @@ const CardProyectos = ({ proyecto }) => {
               target="_blank"
               className="d-block text-end text-light"
             >
-              See projects
+              {t('viewProject')}
             </a>
           </div>
         </Modal.Body>

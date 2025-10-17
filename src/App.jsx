@@ -1,12 +1,15 @@
+import { LanguageProvider } from "./components/context/LanguajeContext";
 import Footer from "./components/Footer";
 import Inicio from "./components/Inicio";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <>
-      <Inicio />
-      <Footer />
+      <LanguageProvider>
+        <Inicio />
+        <Footer />
+      </LanguageProvider>
     </>
   );
 }

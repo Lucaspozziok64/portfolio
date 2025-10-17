@@ -1,0 +1,46 @@
+{
+  "welcome": "Hey, I'm Lucas Figueroa👋",
+  "description": "I'm a Full Stack Developer specialized in the MERN stack (MongoDB, Express, React, Node.js). I'm passionate about building complete web applications—from robust backends to intuitive and dynamic interfaces. I also have experience with modern project management and deployment tools.",
+  "downloadCV": "📥 Download CV",
+  "featuredProjects": "¡Check out my featured projects!!",
+  "technologiesUsed": "Technologies used:",
+  "viewProject": "View project",
+  "skillsTitle": "My Skills",
+  "skillsDescription": "Technologies and tools I work with:",
+  "formTitle": "Contact Me",
+  "formSubTitle": "Let's do something amazing togethers",
+  "formName": "Name",
+  "formEmail": "Email",
+  "formMessage": "Message",
+  "formSend": "Send Message",
+  "footerTitle": "My Links",
+  "formPlaceholders": {
+    "name": "Your name",
+    "email": "your.email@example.com",
+    "message": "Write your message here...",
+    "submit": "Submit"
+  },
+  "projects": {
+    "project1": {
+      "title": "Prescription Management System",
+      "description": "Helps users view or copy forgotten or unknown recipes, just by creating an account you have full access to view, read, create, delete"
+    },
+    "project2": {
+      "title": "Web Movies",
+      "description": "Movie streaming platform with advanced search and filtering capabilities"
+    },
+    "project3": {
+      "title": "leaked news",
+      "description": "News aggregation app with real-time updates"
+    },
+    "project4": {
+      "title": "Mates Ecommerce Website",
+      "description": "E-commerce platform for traditional Argentine mate products"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others"
+  }
+}

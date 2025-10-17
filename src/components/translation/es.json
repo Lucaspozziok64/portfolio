@@ -1,0 +1,46 @@
+{
+  "welcome": "Hola, soy Lucas Figueroa👋",
+  "description": "Soy un Desarrollador Full Stack especializado en el stack MERN (MongoDB, Express, React, Node.js). Me apasiona construir aplicaciones web completas—desde backends robustos hasta interfaces intuitivas y dinámicas. También tengo experiencia con herramientas modernas de gestión de proyectos y deployment.",
+  "downloadCV": "📥 Descargar CV",
+  "featuredProjects": "¡Mira mis proyectos destacados!!",
+  "technologiesUsed": "Tecnologías empleadas:",
+  "viewProject": "Ver proyecto",
+  "skillsTitle": "Mis Habilidades",
+  "skillsDescription": "Tecnologías y herramientas con las que trabajo:",
+  "formTitle": "Contáctame",
+  "formSubTitle": "Hagamos algo increíble juntos",
+  "formName": "Nombre",
+  "formEmail": "Correo Electrónico",
+  "formMessage": "Mensaje",
+  "formSend": "Enviar Mensaje",
+  "footerTitle": "Mis enlaces",
+  "formPlaceholders": {
+    "name": "Tu nombre",
+    "email": "tu.correo@ejemplo.com",
+    "message": "Escribe tu mensaje aquí...",
+    "submit": "Enviar"
+  },
+  "projects": {
+    "project1": {
+      "title": "Blog recetas",
+      "description": "Ayuda a los usuarios a ver o copiar recetas olvidadas o desconocidas, solo creando una cuenta tienes acceso completo para ver, leer, crear, eliminar"
+    },
+    "project2": {
+      "title": "Peliculas web",
+      "description": "Plataforma de streaming de películas con capacidades avanzadas de búsqueda y filtrado"
+    },
+    "project3": {
+      "title": "Web de noticias",
+      "description": "Aplicación de agregación de noticias con actualizaciones en tiempo real"
+    },
+    "project4": {
+      "title": "Tienda web de mates",
+      "description": "Plataforma e-commerce para productos tradicionales de mate argentino"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas & Otros"
+  }
+}
