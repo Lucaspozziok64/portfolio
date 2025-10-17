@@ -1,4 +1,4 @@
-import ImagenPerfil from "../assets/ImagenPerfil.jpeg";
+import ImagenPerfil from "../assets/imagenPerfil.jpeg"
 import blogrecetas from "../assets/blogRecetas.png";
 import ListaProyectos from "./ComponentsInicio/listaProyectos";
 import xtream from "../assets/xtream.png";
