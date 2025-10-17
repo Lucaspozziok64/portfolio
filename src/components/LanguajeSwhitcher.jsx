@@ -9,8 +9,8 @@ const LanguageSwitcher = () => {
       className="btn btn-outline-light btn-sm"
       style={{
         position: "fixed",
-        top: "20px",
-        right: "20px",
+        top: "50px",
+        right: "10px",
         zIndex: 1000,
       }}
     >
