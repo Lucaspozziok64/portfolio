@@ -1,10 +1,15 @@
 import { useLanguage } from "../context/LanguajeContext";
-import enTranslations from "../translation/en.json"
-import esTranslations from "../translation/es.json"
+import enTranslations from "../translation/en.json";
+import esTranslations from "../translation/es.json";
 
 const translations = {
   en: enTranslations,
   es: esTranslations,
+};
+
+const cvFiles = {
+  en: "/LucasFigueroaCVEn-min.pdf",
+  es: "/LucasFigueroaCVEs-min.pdf",
 };
 
 export const useTranslation = () => {
@@ -18,8 +23,12 @@ export const useTranslation = () => {
       value = value[k];
     }
 
-    return value || key; // Si no encuentra la traducción, devuelve la key
+    return value || key;
+  };
+  
+  const getCV = () => {
+    return cvFiles[language];
   };
 
-  return { t, language };
+  return { t, language, getCV };
 };
