@@ -2,9 +2,11 @@ import { useRef, useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Formulario = () => {
   const [validated, setValidated] = useState(false);
+  const { t } = useTranslation()
 
   const {
     register,
@@ -34,9 +36,9 @@ const Formulario = () => {
 
   return (
     <section className="container text-light">
-      <h1 className="text-center text-info titulo">Contact me here!</h1>
+      <h1 className="text-center text-info titulo">{t('formTitle')}</h1>
       <h3 className="my-4 text-center text-info titulo">
-        Let's do something amazing together🚀
+        {t('formSubTitle')}🚀
       </h3>
       <Container className="mb-3 d-flex justify-content-center">
         <Form
@@ -47,7 +49,7 @@ const Formulario = () => {
           onSubmit={handleSubmit(sendEmail)}
         >
           <Form.Group>
-            <Form.Label>Name/company*</Form.Label>
+            <Form.Label>{t('formPlaceholders.name')}*</Form.Label>
             <Form.Control
               type="text"
               className="text-light bg-dark"
@@ -70,7 +72,7 @@ const Formulario = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mt-3">
-            <Form.Label>email*</Form.Label>
+            <Form.Label>{t('formPlaceholders.email')}*</Form.Label>
             <Form.Control
               type="email"
               className="bg-dark text-light"
@@ -102,7 +104,7 @@ const Formulario = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mt-3">
-            <Form.Label>message*</Form.Label>
+            <Form.Label>{t('formPlaceholders.message')}*</Form.Label>
             <Form.Control
               type="text"
               as="textarea"
@@ -127,7 +129,7 @@ const Formulario = () => {
             </Form.Text>
           </Form.Group>
           <Button variant="success" type="submit" className="mt-4">
-            Enviar
+            {t('formPlaceholders.submit')}
           </Button>
         </Form>
       </Container>
