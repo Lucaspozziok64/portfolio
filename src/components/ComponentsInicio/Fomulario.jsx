@@ -1,61 +1,67 @@
-import { useRef, useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { useTranslation } from "../hooks/useTranslation";
+const urlBakend = import.meta.env.VITE_API_BACKEND;
 
 const Formulario = () => {
-  const [validated, setValidated] = useState(false);
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm();
 
-  const form = useRef();
-
-  const sendEmail = () => {
-    emailjs
-      .sendForm("service_ef3sv7t", "template_1vi86a5", form.current, {
-        publicKey: "kj6kTakPgixopYKvB",
-      })
-      .then(
-        () => {
-          <Alert>("Email ENVIADO!");</Alert>
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch(urlBakend, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-      reset()
-    setValidated(true);
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert("¡Mensaje enviado! Te contactaré pronto.");
+        reset();
+      } else {
+        alert("Error al enviar el mensaje. Intenta nuevamente.");
+        reset();
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error de conexión. Intenta nuevamente.");
+    }
   };
 
   return (
     <section className="container text-light">
-      <h1 className="text-center text-info titulo">{t('formTitle')}</h1>
+      <h1 className="text-center text-info titulo">{t("formTitle")}</h1>
       <h3 className="my-4 text-center text-info titulo">
-        {t('formSubTitle')}🚀
+        {t("formSubTitle")}🚀
       </h3>
       <Container className="mb-3 d-flex justify-content-center">
         <Form
           className="text-light w-75"
-          ref={form}
           noValidate
-          validated={validated}
-          onSubmit={handleSubmit(sendEmail)}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <Form.Group>
-            <Form.Label>{t('formPlaceholders.name')}*</Form.Label>
+            <Form.Label>{t("formPlaceholders.name")}*</Form.Label>
             <Form.Control
               type="text"
               className="text-light bg-dark"
               minLength={2}
               maxLength={100}
-              {...register("user_name", {
+              {...register("name", {
                 required: "El nombre es un dato obligatorio",
                 minLength: {
                   value: 2,
@@ -72,14 +78,14 @@ const Formulario = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mt-3">
-            <Form.Label>{t('formPlaceholders.email')}*</Form.Label>
+            <Form.Label>{t("formPlaceholders.email")}*</Form.Label>
             <Form.Control
               type="email"
               className="bg-dark text-light"
               placeholder="Ej lucas@mail.com"
               minLength={4}
               maxLength={100}
-              {...register("user_email", {
+              {...register("email", {
                 required: "El correo electrónico es un dato obligatorio",
                 pattern: {
                   value:
@@ -104,7 +110,7 @@ const Formulario = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mt-3">
-            <Form.Label>{t('formPlaceholders.message')}*</Form.Label>
+            <Form.Label>{t("formPlaceholders.message")}*</Form.Label>
             <Form.Control
               type="text"
               as="textarea"
@@ -128,9 +134,21 @@ const Formulario = () => {
               {errors.consulta?.message}
             </Form.Text>
           </Form.Group>
-          <Button variant="success" type="submit" className="mt-4">
-            {t('formPlaceholders.submit')}
+          <Button
+            variant="success"
+            type="submit"
+            className="mt-4"
+            disabled={isSubmitting}
+          >
+            {isSubmitting
+              ? `${t("formPlaceholders.sending")}`
+              : `${t("formPlaceholders.submit")}`}
           </Button>
+          {isSubmitting && (
+            <Alert variant="warning" className="mt-3">
+              Este producto está temporalmente sin stock
+            </Alert>
+          )}
         </Form>
       </Container>
     </section>
