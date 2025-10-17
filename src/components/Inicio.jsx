@@ -10,7 +10,7 @@ import { useTranslation } from "./hooks/useTranslation";
 import LanguageSwitcher from "./LanguajeSwhitcher";
 
 const Inicio = () => {
-  const { t } = useTranslation();
+  const { t, getCV } = useTranslation();
   const proyectos = [
     {
       id: 1,
@@ -88,7 +88,7 @@ const Inicio = () => {
         </div>
         <div className="d-flex justify-content-center my-5">
           <a
-            href="/LucasFigueroaCV-min.pdf"
+            href={getCV()}
             target="_blank"
             className="botonDescargar"
           >
