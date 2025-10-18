@@ -1,5 +1,5 @@
-import ImagenPerfil from "../assets/ImagenPerfil.jpeg";
-import blogrecetas from "../assets/blogRecetas.png";
+import imagenPerfil from "../assets/ImagenPerfil.jpeg";
+import blogRecetas from "../assets/blogRecetas.png";
 import ListaProyectos from "./ComponentsInicio/listaProyectos";
 import xtream from "../assets/xtream.png";
 import noticiasApp from "../assets/noticiasApp.png";
@@ -15,7 +15,7 @@ const Inicio = () => {
     {
       id: 1,
       title: t('projects.project1.title'),
-      pic: blogrecetas,
+      pic: blogRecetas,
       proyectoUrl: "https://recetasespeciales.netlify.app/",
       descripcion: t('projects.project1.description'),
       tecnologias: [
@@ -78,7 +78,7 @@ const Inicio = () => {
           <div>
             <img
               className="imagenPerfil"
-              src={ImagenPerfil}
+              src={imagenPerfil}
               alt="Imagen de Lucas Figueroa"
             />
           </div>
