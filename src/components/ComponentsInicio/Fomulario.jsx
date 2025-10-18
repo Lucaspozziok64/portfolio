@@ -1,6 +1,7 @@
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "../hooks/useTranslation";
+import Swal from "sweetalert2";
 const urlBakend = import.meta.env.VITE_API_BACKEND;
 
 const Formulario = () => {
@@ -30,15 +31,37 @@ const Formulario = () => {
 
       const result = await response.json();
       if (result.success) {
-        alert("¡Mensaje enviado! Te contactaré pronto.");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Email enviado exitosamente",
+        });
         reset();
       } else {
-        alert("Error al enviar el mensaje. Intenta nuevamente.");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Error al enviar!",
+        });
         reset();
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error de conexión. Intenta nuevamente.");
+      Swal.fire({
+        icon: "error",
+        title: "Error de conexion,",
+        text: "Intenta nuevamente"
+      });
     }
   };
 
