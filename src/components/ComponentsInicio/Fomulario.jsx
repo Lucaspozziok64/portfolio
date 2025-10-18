@@ -97,7 +97,7 @@ const Formulario = () => {
               })}
             ></Form.Control>
             <Form.Text className="text-danger">
-              {errors.nombre?.message}
+              {errors.name?.message}
             </Form.Text>
           </Form.Group>
           <Form.Group className="mt-3">
@@ -154,7 +154,7 @@ const Formulario = () => {
               })}
             />
             <Form.Text className="text-danger">
-              {errors.consulta?.message}
+              {errors.message?.message}
             </Form.Text>
           </Form.Group>
           <Button
