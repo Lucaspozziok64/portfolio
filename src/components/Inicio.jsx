@@ -8,6 +8,7 @@ import MySkill from "./ComponentsInicio/MySkill";
 import { useTranslation } from "./hooks/useTranslation";
 import LanguageSwitcher from "./LanguajeSwhitcher";
 import ListaProyectos from "./ComponentsInicio/ListaProyectos"
+import WhatsAppButton from "./ComponentsInicio/WhatsAppButton";
 
 const Inicio = () => {
   const { t, getCV } = useTranslation();
@@ -113,6 +114,7 @@ const Inicio = () => {
           <Formulario />
         </article>
       </section>
+      <WhatsAppButton />
     </>
   );
 };
