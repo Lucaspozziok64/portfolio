@@ -17,10 +17,12 @@
 }
 
 .imagenPerfil {
-  height: 300px;
-  width: 295px;
-  border-radius: 50px;
+  height: 350px;
+  width: 300px;
+  border-radius: 200px;
   border: 1px solid #fff;
+  object-fit: cover;
+  object-position: center;
 }
 
 .botonDescargar {
