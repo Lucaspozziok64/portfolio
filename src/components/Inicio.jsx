@@ -9,10 +9,6 @@ import MySkill from "./ComponentsInicio/MySkill";
 import { useTranslation } from "./hooks/useTranslation";
 import LanguageSwitcher from "./LanguajeSwhitcher";
 import WhatsAppButton from "./ComponentsInicio/WhatsAppButton";
-import blogRecetas from "../../public/blogRecetas.mp4"
-import xtream from "../../public/xtream.mp4"
-import tiendaMates from "../../public/tiendaDeMates.mp4"
-import apiNoticias from "../../public/apiNoticias.mp4"
 
 const Inicio = () => {
   const { t, getCV } = useTranslation();
@@ -21,7 +17,7 @@ const Inicio = () => {
       id: 1,
       title: t('projects.project1.title'),
       pic: imagenRecetas,
-      video: blogRecetas,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761448303/blogRecetas_fepsop.mp4",
       proyectoUrl: "https://recetasespeciales.netlify.app/",
       descripcion: t('projects.project1.description'),
       tecnologias: [
@@ -36,7 +32,7 @@ const Inicio = () => {
       id: 2,
       title: t('projects.project2.title'),
       pic: imagenXtream,
-      video: xtream,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761448295/xtream_imuoly.mp4",
       proyectoUrl: "https://moviesxtream.netlify.app/",
       descripcion:
         t('projects.project2.description'),
@@ -51,7 +47,7 @@ const Inicio = () => {
       id: 3,
       title: t('projects.project3.title'),
       pic: noticiasApp,
-      video: apiNoticias,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761448169/Grabaci%C3%B3n_de_pantalla_2025-10-25_214137_k1avem.mp4",
       proyectoUrl: "https://noticiasfiltradas.netlify.app/",
       descripcion: t('projects.project3.description'),
       tecnologias: [
@@ -65,7 +61,7 @@ const Inicio = () => {
       id: 4,
       title: t('projects.project4.title'),
       pic: mates,
-      video: tiendaMates,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761447976/Grabaci%C3%B3n_de_pantalla_2025-10-25_212145_t7patr.mp4",
       proyectoUrl: "https://mateandoshop.netlify.app/",
       descripcion:
         t('projects.project4.description'),
