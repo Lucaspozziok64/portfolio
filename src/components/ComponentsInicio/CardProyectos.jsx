@@ -62,8 +62,7 @@ const CardProyectos = ({ proyecto }) => {
                   left: "50%",
                   zIndex: 2,
                 }}
-              >
-              </div>
+              ></div>
             )}
             <video
               src={proyecto.video}
@@ -73,6 +72,13 @@ const CardProyectos = ({ proyecto }) => {
               autoPlay
               onCanPlay={() => setVideoLoaded(true)}
               className="img-fluid"
+              style={{
+                maxHeight: "400px",
+                borderRadius: "10px",
+                opacity: videoLoaded ? 1 : 0,
+                transform: videoLoaded ? "scale(1)" : "scale(0.95)",
+                transition: "opacity 0.6s ease, transform 0.6s ease",
+              }}
             />
           </div>
           <hr className="text-light"></hr>
