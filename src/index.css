@@ -43,13 +43,14 @@
   color: #fff;
 }
 
-.contenedorImagen {
+.contenedorVideo {
   text-decoration: none !important;
   color: #fff;
+  max-width: 500px;
   transition: 1s ease;
 }
 
-.contenedorImagen:hover {
+.contenedorVideo:hover {
   background-color: #fff;
   color: #000 !important;
 }

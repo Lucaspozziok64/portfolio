@@ -1,8 +1,12 @@
+import imagenPerfil from "../assets/ImagenPerfil.jpeg";
+import ListaProyectos from "./ComponentsInicio/listaProyectos";
 import imagenPerfil from "../assets/imagenPerfil.jpeg"
 import blogRecetas from "../assets/blogRecetas.png";
 import xtream from "../assets/xtream.png";
 import noticiasApp from "../assets/noticiasApp.png";
 import mates from "../assets/meates.png";
+import imagenRecetas from "../assets/blogRecetas.png"
+import imagenXtream from "../assets/xtream.png"
 import Formulario from "./ComponentsInicio/Fomulario";
 import MySkill from "./ComponentsInicio/MySkill";
 import { useTranslation } from "./hooks/useTranslation";
@@ -16,7 +20,8 @@ const Inicio = () => {
     {
       id: 1,
       title: t('projects.project1.title'),
-      pic: blogRecetas,
+      pic: imagenRecetas,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761448303/blogRecetas_fepsop.mp4",
       proyectoUrl: "https://recetasespeciales.netlify.app/",
       descripcion: t('projects.project1.description'),
       tecnologias: [
@@ -30,7 +35,8 @@ const Inicio = () => {
     {
       id: 2,
       title: t('projects.project2.title'),
-      pic: xtream,
+      pic: imagenXtream,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761448295/xtream_imuoly.mp4",
       proyectoUrl: "https://moviesxtream.netlify.app/",
       descripcion:
         t('projects.project2.description'),
@@ -45,6 +51,7 @@ const Inicio = () => {
       id: 3,
       title: t('projects.project3.title'),
       pic: noticiasApp,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761448169/Grabaci%C3%B3n_de_pantalla_2025-10-25_214137_k1avem.mp4",
       proyectoUrl: "https://noticiasfiltradas.netlify.app/",
       descripcion: t('projects.project3.description'),
       tecnologias: [
@@ -58,6 +65,7 @@ const Inicio = () => {
       id: 4,
       title: t('projects.project4.title'),
       pic: mates,
+      video: "https://res.cloudinary.com/dduqetzqk/video/upload/v1761447976/Grabaci%C3%B3n_de_pantalla_2025-10-25_212145_t7patr.mp4",
       proyectoUrl: "https://mateandoshop.netlify.app/",
       descripcion:
         t('projects.project4.description'),
