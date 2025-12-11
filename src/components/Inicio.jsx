@@ -1,4 +1,4 @@
-import imagenPerfil from "../assets/ImagenPerfil.jpeg";
+import imagenPerfil from "../assets/imagenPerfil.jpeg"
 import noticiasApp from "../assets/noticiasApp.png";
 import mates from "../assets/meates.png";
 import imagenRecetas from "../assets/blogRecetas.png"
