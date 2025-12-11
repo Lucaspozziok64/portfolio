@@ -3,12 +3,14 @@ import { useTranslation } from "../hooks/useTranslation.js";
 import LanguageSwitcher from "../LanguajeSwhitcher";
 
 const MySkill = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <>
-    <LanguageSwitcher />
+      <LanguageSwitcher />
+      <h2 className="text-info text-center subtitulo m-0 p-0 bebas">
+        {t("skillsTitle")}
+      </h2>
       <div className="container my-5 bg-gradient rounded-5">
-        <h2 className="text-info text-center subtitulo my-5">{t('skillsTitle')}</h2>
         <div className="container">
           <div className="row justify-content-md-between gy-sm-3 text-light">
             <article className="col-12 col-md-12 col-lg-3 text-center text-md-center">
@@ -35,7 +37,7 @@ const MySkill = () => {
               </ul>
             </article>
             <article className="col-12 col-md-3 col-lg-3 text-center text-md-start gy-3">
-              <h4 className="bebas">💻{t('skills.frontend')}</h4>
+              <h4 className="bebas">💻{t("skills.frontend")}</h4>
               <ul className="list-unstyled">
                 <li>
                   <img
@@ -82,7 +84,7 @@ const MySkill = () => {
               </ul>
             </article>
             <article className="col-12 col-md-3 col-lg-3 text-center text-md-start gy-3">
-              <h4 className="bebas">🧠 {t('skills.backend')}</h4>
+              <h4 className="bebas">🧠 {t("skills.backend")}</h4>
               <ul className="list-unstyled">
                 <li>
                   <img

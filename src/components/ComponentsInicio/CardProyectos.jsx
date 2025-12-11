@@ -37,6 +37,7 @@ const CardProyectos = ({ proyecto }) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
         className="colorFondo"
+        backdrop='static'
       >
         <Modal.Header className="colorFondoModal" closeButton>
           <Modal.Title

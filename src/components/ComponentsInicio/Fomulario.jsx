@@ -67,7 +67,7 @@ const Formulario = () => {
 
   return (
     <section className="container text-light">
-      <h1 className="text-center text-info subtitulo">{t("formTitle")}</h1>
+      <h1 className="text-center text-info bebas">{t("formTitle")}</h1>
       <h3 className="my-4 text-center text-info bebas">
         {t("formSubTitle")}🚀
       </h3>
