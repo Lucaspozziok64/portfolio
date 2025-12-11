@@ -47,22 +47,26 @@ const CardProyectos = ({ proyecto }) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="colorFondoModal">
-          <h5 className="text-center text-light bebas">{proyecto.descripcion}</h5>
+          <h5 className="text-center text-light bebas">
+            {proyecto.descripcion}
+          </h5>
           <div
             className="contenedorVideoModal text-center"
             style={{ position: "relative" }}
           >
             {!videoLoaded && (
-              <div
-                className="spinner-border text-light"
-                role="status"
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  zIndex: 2,
-                }}
-              ></div>
+              <>
+                <div
+                  className="spinner-border text-light"
+                  role="status"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    zIndex: 2,
+                  }}
+                ></div>
+              </>
             )}
             <video
               src={proyecto.video}

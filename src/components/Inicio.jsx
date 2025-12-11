@@ -95,7 +95,7 @@ const Inicio = () => {
           <a
             href={getCV()}
             target="_blank"
-            className="botonDescargar"
+            className="botonDescargar titulo"
           >
             {t("downloadCV")}
           </a>
@@ -103,7 +103,7 @@ const Inicio = () => {
       </section>
       <section className="container my-5">
         <article className="container bg-gradient rounded-5">
-          <h2 className="text-info text-center subtitulo">{t("featuredProjects")}</h2>
+          <h2 className="text-info text-center bebas">{t("featuredProjects")}</h2>
           <ListaProyectos proyectos={proyectos} />
         </article>
       </section>
