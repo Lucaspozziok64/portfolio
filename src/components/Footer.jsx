@@ -4,7 +4,7 @@ const Footer = () => {
   const { t } = useTranslation()
   return (
     <footer className="bg-gradient text-light text-center p-3">
-      <h4 className="mb-0">{t('footerTitle')}</h4>
+      <h4 className="mb-0 titulo">{t('footerTitle')}</h4>
       <div>
         <a
           href="https://linkedin.com/in/lucas-figueroa-579b0b30b"

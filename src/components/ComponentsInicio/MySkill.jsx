@@ -8,11 +8,11 @@ const MySkill = () => {
     <>
     <LanguageSwitcher />
       <div className="container my-5 bg-gradient rounded-5">
-        <h2 className="text-info text-center titulo my-5">{t('skillsTitle')}</h2>
+        <h2 className="text-info text-center subtitulo my-5">{t('skillsTitle')}</h2>
         <div className="container">
           <div className="row justify-content-md-between gy-sm-3 text-light">
             <article className="col-12 col-md-12 col-lg-3 text-center text-md-center">
-              <h4>📋 Project Management</h4>
+              <h4 className="bebas">📋 Project Management</h4>
               <ul className="list-unstyled">
                 <li>
                   <img
@@ -35,7 +35,7 @@ const MySkill = () => {
               </ul>
             </article>
             <article className="col-12 col-md-3 col-lg-3 text-center text-md-start gy-3">
-              <h4>💻{t('skills.frontend')}</h4>
+              <h4 className="bebas">💻{t('skills.frontend')}</h4>
               <ul className="list-unstyled">
                 <li>
                   <img
@@ -82,7 +82,7 @@ const MySkill = () => {
               </ul>
             </article>
             <article className="col-12 col-md-3 col-lg-3 text-center text-md-start gy-3">
-              <h4>🧠 {t('skills.backend')}</h4>
+              <h4 className="bebas">🧠 {t('skills.backend')}</h4>
               <ul className="list-unstyled">
                 <li>
                   <img
@@ -123,8 +123,8 @@ const MySkill = () => {
               </ul>
             </article>
             <article className="col-12 col-md-3 col-lg-3 text-center text-md-start gy-3">
-              <h4>🗓️ Agile methodologies:</h4>
-              <div className="d-flex flex-column">
+              <h4 className="bebas">🗓️ Agile methodologies:</h4>
+              <div className="d-flex flex-column bebas">
                 <strong>**Daily stand-ups**</strong>
                 <strong>**Sprint planning**</strong>
                 <strong>**Retrospectives**</strong>

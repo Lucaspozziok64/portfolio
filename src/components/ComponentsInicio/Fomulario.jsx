@@ -67,8 +67,8 @@ const Formulario = () => {
 
   return (
     <section className="container text-light">
-      <h1 className="text-center text-info titulo">{t("formTitle")}</h1>
-      <h3 className="my-4 text-center text-info titulo">
+      <h1 className="text-center text-info bebas">{t("formTitle")}</h1>
+      <h3 className="my-4 text-center text-info subtitulo">
         {t("formSubTitle")}🚀
       </h3>
       <Container className="mb-3 d-flex justify-content-center">

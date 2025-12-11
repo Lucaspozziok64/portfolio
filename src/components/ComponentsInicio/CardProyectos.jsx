@@ -15,7 +15,7 @@ const CardProyectos = ({ proyecto }) => {
         <Button onClick={handleShow} variant="white" className="bg-gradient">
           <div className="contenedorVideo">
             <div>
-              <h3 className="text-center">{proyecto.title}</h3>
+              <h3 className="text-center bebas">{proyecto.title}</h3>
             </div>
             <div className="container my-3">
               <img
@@ -41,13 +41,13 @@ const CardProyectos = ({ proyecto }) => {
         <Modal.Header className="colorFondoModal" closeButton>
           <Modal.Title
             id="contained-modal-title-vcenter"
-            className="w-100 text-center text-light"
+            className="w-100 text-center text-light titulo"
           >
             {proyecto.title}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="colorFondoModal">
-          <p className="text-center text-light">{proyecto.descripcion}</p>
+          <h5 className="text-center text-light bebas">{proyecto.descripcion}</h5>
           <div
             className="contenedorVideoModal text-center"
             style={{ position: "relative" }}
@@ -83,7 +83,7 @@ const CardProyectos = ({ proyecto }) => {
           </div>
           <hr className="text-light"></hr>
           <div>
-            <h5 className="text-center my-2 text-light">
+            <h5 className="text-center my-2 text-light bebas">
               {t("technologiesUsed")}
             </h5>
             <ul className="listaSkills list-unstyled d-flex flex-column align-items-center flex-md-row justify-content-md-evenly">

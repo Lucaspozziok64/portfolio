@@ -89,7 +89,7 @@ const Inicio = () => {
           </div>
         </div>
         <div className="container text-light my-3">
-          <h6 className="subtitulo">{t("description")}</h6>
+          <h5 className="bebas">{t("description")}</h5>
         </div>
         <div className="d-flex justify-content-center my-5">
           <a
@@ -103,7 +103,7 @@ const Inicio = () => {
       </section>
       <section className="container my-5">
         <article className="container bg-gradient rounded-5">
-          <h2 className="text-info text-center">{t("featuredProjects")}</h2>
+          <h2 className="text-info text-center subtitulo">{t("featuredProjects")}</h2>
           <ListaProyectos proyectos={proyectos} />
         </article>
       </section>
