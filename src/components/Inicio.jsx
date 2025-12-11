@@ -1,6 +1,4 @@
-import imagenPerfil from "../assets/imagenPerfil.jpeg"
-import blogRecetas from "../assets/blogRecetas.png";
-import xtream from "../assets/xtream.png";
+import imagenPerfil from "../assets/ImagenPerfil.jpeg";
 import noticiasApp from "../assets/noticiasApp.png";
 import mates from "../assets/meates.png";
 import imagenRecetas from "../assets/blogRecetas.png"
