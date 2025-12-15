@@ -7,6 +7,7 @@
   "viewProject": "View project",
   "skillsTitle": "¡ My Skills !",
   "skillsDescription": "Technologies and tools I work with:",
+  "My Certificates": "¡ My Certificates !",
   "formTitle": "Contact Me",
   "formSubTitle": "Let's do something amazing togethers",
   "formName": "Name",
@@ -37,6 +38,20 @@
     "project4": {
       "title": "leaked news",
       "description": "News aggregation app with real-time updates"
+    }
+  },
+  "titulos": {
+    "titulo1": {
+      "title": "Frontend development"
+    },
+    "titulo2": {
+      "title": "Backend Development"
+    },
+    "titulo3": {
+      "title": "Web development"
+    },
+    "titulo4": {
+      "title": "Programming Logic"
     }
   },
   "skills": {

@@ -8,6 +8,7 @@ import { useTranslation } from "./hooks/useTranslation";
 import LanguageSwitcher from "./LanguajeSwhitcher";
 import ListaProyectos from "./ComponentsInicio/ListaProyectos";
 import WhatsAppButton from "./ComponentsInicio/WhatsAppButton";
+import MyCertificates from "./ComponentsInicio/MyCertificates";
 
 const Inicio = () => {
   const { t, getCV } = useTranslation();
@@ -75,11 +76,35 @@ const Inicio = () => {
       ],
     },
   ];
+  const titulos = [
+    {
+      id: 1,
+      title: t("titulos.titulo1.title"),
+      pic: "https://certs.rollingcodeschool.com/bHVrYWZpZ3Vlcm9hNjRAZ21haWwuY29t-1763515093630-1.png",
+    },
+    {
+      id: 2,
+      title: t("titulos.titulo2.title"),
+      pic: "https://certs.rollingcodeschool.com/bHVrYWZpZ3Vlcm9hNjRAZ21haWwuY29t-1763415531263-1.png",
+    },
+    {
+      id: 3,
+      title: t("titulos.titulo3.title"),
+      pic: "https://certs.rollingcodeschool.com/bHVrYWZpZ3Vlcm9hNjRAZ21haWwuY29t-1763514877437-1.png",
+    },
+    {
+      id: 4,
+      title: t("titulos.titulo4.title"),
+      pic: "https://certs.rollingcodeschool.com//bHVrYWZpZ3Vlcm9hNjRAZ21haWwuY29t-1735969131707-1.png",
+    },
+  ];
   return (
     <>
       <LanguageSwitcher />
       <section>
-        <h1 className="text-center text-light my-3 mb-3 titulo">{t("welcome")}</h1>
+        <h1 className="text-center text-light my-3 mb-3 titulo">
+          {t("welcome")}
+        </h1>
         <div className="d-flex justify-content-center">
           <div>
             <img
@@ -99,9 +124,7 @@ const Inicio = () => {
         </div>
       </section>
       <section className="container my-5">
-          <h2 className="text-info text-center bebas">
-            {t("featuredProjects")}
-          </h2>
+        <h2 className="text-info text-center bebas">{t("featuredProjects")}</h2>
         <article className="container bg-gradient rounded-5">
           <ListaProyectos proyectos={proyectos} />
         </article>
@@ -110,6 +133,10 @@ const Inicio = () => {
         <article>
           <MySkill />
         </article>
+      </section>
+      <section className="container my-5">
+        <h2 className="text-center text-info my-2 bebas">{t("My Certificates")}</h2>
+        <MyCertificates titulos={titulos} />
       </section>
       <section className="container my-5">
         <hr className="text-light" />
