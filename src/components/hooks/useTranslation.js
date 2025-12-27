@@ -8,8 +8,8 @@ const translations = {
 };
 
 const cvFiles = {
-  en: "/LucasFigueroaCVEn-min.pdf",
-  es: "/LucasFigueroaCVEs-min.pdf",
+  en: "/LucasFigueroaCVEn.pdf",
+  es: "/LucasFigueroaCVEs.pdf",
 };
 
 export const useTranslation = () => {
